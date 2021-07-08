@@ -51,6 +51,19 @@ function changeBackgroundHolidays() {
   }
 }
 
+function changeTextFriday() {
+  let text = document.querySelectorAll(".friday");
+  let days = [3, 10, 17, 24];
+  for (const key in text) {
+    const element = text[key];
+    if (element.innerHTML === "Sextou!") {
+      element.innerHTML = days[key];
+    } else {
+      element.innerHTML = "Sextou!";
+    }
+  }
+}
+
 function createHolidayButton(string) {
   let button = document.createElement("button");
   button.id = "btn-holiday";
@@ -59,6 +72,15 @@ function createHolidayButton(string) {
   document.querySelector(".buttons-container").appendChild(button);
 }
 
+function createFridayButton(string) {
+  let button = document.createElement("button");
+  button.id = "btn-friday";
+  button.innerHTML = string;
+  button.addEventListener("click", changeTextFriday);
+  document.querySelector(".buttons-container").appendChild(button);
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonths();
 createHolidayButton();
+createFridayButton("Sexta-feira");
