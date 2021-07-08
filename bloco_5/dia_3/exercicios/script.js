@@ -80,7 +80,43 @@ function createFridayButton(string) {
   document.querySelector(".buttons-container").appendChild(button);
 }
 
+// Gabarito
+function dayMouseOver() {
+  let days = document.querySelector("#days");
+
+  days.addEventListener("mouseover", function (event) {
+    event.target.style.fontSize = "30px";
+    event.target.style.fontWeight = "600";
+  });
+}
+
+// Gabarito
+function dayMouseOut() {
+  let days = document.querySelector("#days");
+
+  days.addEventListener("mouseout", function (event) {
+    event.target.style.fontWeight = "200";
+    event.target.style.fontSize = "20px";
+  });
+}
+
+function addTask(task) {
+  let span = document.createElement("span");
+  span.innerHTML = task;
+  document.querySelector(".my-tasks").appendChild(span);
+}
+
+function addColorTag(color) {
+  let div = document.createElement('div');
+  div.style.backgroundColor = color;
+  document.querySelector('.my-tasks').appendChild(div);
+}
+
+dayMouseOver();
+dayMouseOut();
 createDaysOfTheWeek();
 createDaysOfTheMonths();
 createHolidayButton();
 createFridayButton("Sexta-feira");
+addTask("Realizar projeto de pixel art");
+addColorTag('blue');
