@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/addStates.js" async></script>
+    <title>Document</title>
+  </head>
+  <header class="title">
+    <h1 class="title">Formulário</h1>
+  </header>
+  <body>
+    <form action="" method="get" class="box">
+      <fieldset class="box">
+        <div class="field">
+          <label for="input-name" class="label">Nome</label>
+          <div class="control">
+            <input
+              type="text"
+              name="name"
+              id="input-name"
+              maxlength="40"
+              required
+              class="input"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="input-email" class="label">Email</label>
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="input-email"
+              maxlength="50"
+              required
+              class="input"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="input-cpf" class="label">CPF</label>
+          <div class="control">
+            <input
+              type="text"
+              name="cpf"
+              id="input-cpf"
+              maxlength="11"
+              required
+              class="input"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="input-address" class="label">Endereço</label>
+          <div class="control">
+            <input
+              type="text"
+              name="address"
+              id="input-address"
+              maxlength="200"
+              required
+              class="input"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="input-city" class="label">Cidade</label>
+          <div class="control">
+            <input
+              type="text"
+              name="city"
+              id="input-city"
+              maxlength="28"
+              required
+              class="input"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="input-state" class="label">Estado</label>
+          <div class="select">
+            <select name="state" id="input-state" required></select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="" class="label">Tipo</label>
+          <div class="control type">
+            <label for="type-home" class="radio">Casa</label>
+            <input
+              type="radio"
+              name="type"
+              id="type-home"
+              required
+              class="radio"
+              checked
+            />
+          </div>
+          <div class="control type">
+            <label for="type-ap" class="radio">Apartamento</label>
+            <input
+              type="radio"
+              name="type"
+              id="type-ap"
+              required
+              class="radio"
+            />
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="box">
+        <div class="field">
+          <label for="input-bio" class="label">Resumo</label>
+          <textarea
+            name="bio"
+            id="input-bio"
+            cols="30"
+            rows="10"
+            maxlength="1000"
+            required
+            class="textarea"
+          ></textarea>
+        </div>
+        <div class="field">
+          <label for="input-office" class="label">Cargo</label>
+          <div class="control">
+            <input
+              type="text"
+              name="office"
+              id="input-office"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="input-date" class="label">Data de início</label>
+          <div class="control">
+            <input
+              type="text"
+              name="firstday"
+              id="input-date"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+      </fieldset>
+      <div class="control buttons">
+        <button type="submit" class="button is-primary">Enviar</button>
+      </div>
+    </form>
+  </body>
+</html>
