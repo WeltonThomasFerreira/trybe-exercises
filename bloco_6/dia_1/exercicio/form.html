@@ -8,8 +8,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/addStates.js" async></script>
     <title>Document</title>
   </head>
+  <header class="title">
+    <h1 class="title">Formulário</h1>
+  </header>
   <body>
     <form action="" method="get" class="box">
       <fieldset>
@@ -80,18 +85,17 @@
         </div>
         <div class="field">
           <label for="input-state" class="label">Estado</label>
-          <div class="control">
+          <div class="select">
             <select
               name="state"
               id="input-state"
               required
-              class="select"
             ></select>
           </div>
         </div>
         <div class="field">
           <label for="" class="label">Tipo</label>
-          <div class="control">
+          <div class="control type">
             <label for="type-home" class="radio">Casa</label>
             <input
               type="radio"
@@ -102,7 +106,7 @@
               checked
             />
           </div>
-          <div class="control">
+          <div class="control type">
             <label for="type-ap" class="radio">Apartamento</label>
             <input
               type="radio"
